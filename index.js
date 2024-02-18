@@ -26,6 +26,8 @@ var scene = new THREE.Scene();
 
 // Create a camera
 var camera = new THREE.Camera();
+camera.near = 10;
+camera.far = 100;
 scene.add(camera);
 
 var light = new THREE.AmbientLight(0xffffff);
