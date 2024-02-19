@@ -1,65 +1,53 @@
-<!DOCTYPE html>
-<meta
-  name="viewport"
-  content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-/>
-<script src="./three.min.js"></script>
-<script src="./GLTFLoader.js"></script>
-<script src="./ar-threex.js"></script>
-
-<body
-  style="
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    overflow: hidden;
-  "
->
-  <style>
-    .arjs-loader {
-      margin: 0 auto;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .arjs-loader-spinner {
-      z-index: 10;
-      transform: spin 1s linear infinite;
-      animation: spin 1s linear infinite;
-      border: 3px solid #ddd;
-      border-top: 3px solid #42a5f5;
-      border-radius: 50%;
-      height: 75px;
-      width: 75px;
-    }
-
-    @-webkit-keyframes spin {
-      to {
-        border-top-color: #42a5f5;
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <script>
+      function playVideo() {
+        var video = document.getElementById("card");
+        video.play();
+        var introMsg = document.getElementById("introMsg");
+        introMsg.style.display = "none";
       }
-    }
+    </script>
+    <a-scene
+      mindar-image="imageTargetSrc: ./targets.mind;"
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+      onclick="playVideo()"
+    >
+      <a-assets>
+        <video
+          id="card"
+          preload="auto"
+          src="./video.mp4"
+          width="160"
+          height="90"
+          loop="true"
+        ></video>
+      </a-assets>
 
-    @keyframes spin {
-      to {
-        border-top-color: #42a5f5;
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-  </style>
-  <div class="arjs-loader">
-    <div class="arjs-loader-spinner"></div>
-  </div>
-  <script src="./index.js"></script>
-</body>
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-plane
+          src="#card"
+          position="0 0 0"
+          height="0.552"
+          width="1"
+          rotation="0 0 -45"
+        ></a-plane>
+      </a-entity>
+    </a-scene>
+    <div id="introMsg" style="background-color: white; z-index: 1000; position: absolute; top: 0; left: 0; width: 60%; padding: 20pt;">
+      <p>
+        Apunta al ícono de Excelencia Comercial para ver el video. Luego da click para comenzar.
+      </p>
+    </div>
+  </body>
+</html>
