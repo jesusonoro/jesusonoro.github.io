@@ -44,8 +44,20 @@
           scale="2 2 1"
           rotation="0 0 0"
         ></a-plane>
-        <a-entity gltf-model="#caja50" position="-1 -1 1" scale="0.25 0.25 0.25" rotation="0 0 45"></a-entity>
-        <a-entity gltf-model="#caja100" position="1 -1 1" scale="0.25 0.25 0.25" rotation="0 0 45"></a-entity>
+        <a-entity
+          gltf-model="#caja50"
+          position="-1 -0.25 1"
+          scale="0.25 0.25 0.25"
+          rotation="45 0 0"
+          animation="property: rotation; to: 45 360 0; dur: 5000; easing: linear; loop: true"
+        ></a-entity>
+        <a-entity
+          gltf-model="#caja100"
+          position="1 -0.25 1"
+          scale="0.25 0.25 0.25"
+          rotation="45 0 0"
+          animation="property: rotation; to: 45 360 0; dur: 5000; easing: linear; loop: true"
+        ></a-entity>
       </a-entity>
     </a-scene>
 
