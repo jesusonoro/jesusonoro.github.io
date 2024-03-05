@@ -15,9 +15,7 @@
         console.log(logo3D);
         setTimeout(() => {
           console.log("showing logo");
-          console.log("logo3D scale before", logo3D.getAttribute("scale"));
-          logo3D.setAttribute("scale", "0.6 0.6 0.6");
-          console.log("logo3D scale after", logo3D.getAttribute("scale"));
+          logo3D.setAttribute("scale", "2 2 2");
         }, 8000);
         setTimeout(() => {
           console.log("hiding logo");
@@ -26,7 +24,7 @@
 
         var message = document.querySelector("#message");
         setTimeout(() => {
-          message.setAttribute("scale", "1 1 1");
+          message.setAttribute("scale", "3 3 3");
         }, 16000);
         setTimeout(() => {
           message.setAttribute(
@@ -63,6 +61,7 @@
         }, 52000);
       }
     </script>
+
     <a-scene
       mindar-image="imageTargetSrc: ./targets.mind; filterMinCF:0.0001; filterBeta: 0.001;"
       color-space="sRGB"
@@ -88,16 +87,16 @@
       <a-entity mindar-image-target="targetIndex: 0">
         <a-plane
           src="#card"
-          position="0 0 0"
+          position="0 -0.6 1"
           height="0.552"
           width="1"
-          scale="2 2 1"
+          scale="5 5 1"
           rotation="0 0 0"
         ></a-plane>
         <a-entity
           id="logoEntity"
           gltf-model="#logo"
-          position="0 -1 0.2"
+          position="0 -1.8 1"
           scale="0 0 0"
           rotation="0 0 0"
         ></a-entity>
@@ -105,7 +104,7 @@
           id="message"
           width="1.92"
           height="0.48"
-          position="0 -0.8 0.2"
+          position="0 -1.5 0.2"
           scale="0 0 0"
           material="src:./txt1.png; transparent:true; alphaTest:0;"
           shadow="cast:true; receive:true"
