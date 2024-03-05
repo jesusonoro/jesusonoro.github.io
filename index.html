@@ -87,7 +87,7 @@
       <a-entity mindar-image-target="targetIndex: 0">
         <a-plane
           src="#card"
-          position="0 -0.6 1"
+          position="0 -0.6 0"
           height="0.552"
           width="1"
           scale="5 5 1"
@@ -96,8 +96,8 @@
         <a-entity
           id="logoEntity"
           gltf-model="#logo"
-          position="0 -1.8 1"
-          scale="0 0 0"
+          position="0 -1 1"
+          scale="2 2 2"
           rotation="0 0 0"
         ></a-entity>
         <a-plane
@@ -120,12 +120,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 60%;
-        padding: 20pt;
+        width: 100%;
+        padding: 10pt;
+        box-sizing: border-box;
       "
     >
       <p>
-        Apunta a la imagen del roll-up para ver el video. Luego da click para
+        Apunta a la imagen del roll-up para ver el video. Luego da click a la pantalla para
         comenzar.
       </p>
     </div>
