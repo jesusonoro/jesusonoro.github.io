@@ -32,7 +32,7 @@
         setTimeout(() => {
           message.setAttribute(
             "material",
-            "src:./txt2_.png; transparent:true; alphaTest:0;"
+            "src:./txt2.png; transparent:true; alphaTest:0;"
           );
           setTimeout(() => {
             message.setAttribute("scale", "2.5 2.5 2.5");
@@ -41,13 +41,13 @@
         setTimeout(() => {
           message.setAttribute(
             "material",
-            "src:./txt3_.png; transparent:true; alphaTest:0;"
+            "src:./txt3.png; transparent:true; alphaTest:0;"
           );
         }, 31500);
         setTimeout(() => {
           message.setAttribute(
             "material",
-            "src:./txt4_.png; transparent:true; alphaTest:0;"
+            "src:./txt4.png; transparent:true; alphaTest:0;"
           );
         }, 33750);
         setTimeout(() => {
@@ -56,18 +56,24 @@
         setTimeout(() => {
           message.setAttribute(
             "material",
-            "src:./txt5_.png; transparent:true; alphaTest:0;"
+            "src:./txt5.png; transparent:true; alphaTest:0;"
           );
           setTimeout(() => {
             message.setAttribute("scale", "2.5 2.5 2.5");
           }, 200);
         }, 39500);
         setTimeout(() => {
+            message.setAttribute("scale", "0 0 0");
+        }, 43000);
+        setTimeout(() => {
           message.setAttribute(
             "material",
-            "src:./txt6_.png; transparent:true; alphaTest:0;"
+            "src:./txt6.png; transparent:true; alphaTest:0;"
           );
-        }, 48300);
+          setTimeout(() => {
+            message.setAttribute("scale", "2.5 2.5 2.5");
+          }, 200);
+        }, 48000);
         setTimeout(() => {
           message.setAttribute("scale", "0 0 0");
         }, 51000);
@@ -118,7 +124,7 @@
           height="0.48"
           position="0 -1.2 0.2"
           scale="0 0 0"
-          material="src:./txt1_.png; transparent:true; alphaTest:0;"
+          material="src:./txt1.png; transparent:true; alphaTest:0;"
           shadow="cast:true; receive:true"
         ></a-plane>
       </a-entity>
