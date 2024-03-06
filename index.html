@@ -16,40 +16,52 @@
         setTimeout(() => {
           console.log("showing logo");
           logo3D.setAttribute("scale", "1.2 1.2 1.2");
-        }, 8000);
+        }, 7500);
         setTimeout(() => {
           console.log("hiding logo");
           logo3D.setAttribute("scale", "0 0 0");
-        }, 15800);
+        }, 12000);
 
         var message = document.querySelector("#message");
         setTimeout(() => {
           message.setAttribute("scale", "3 3 3");
-        }, 16000);
+        }, 15500);
+        setTimeout(() => {
+          message.setAttribute("scale", "0 0 0");
+        }, 19500);
         setTimeout(() => {
           message.setAttribute(
             "material",
             "src:./txt2.png; transparent:true; alphaTest:0;"
           );
-        }, 29000);
+          setTimeout(() => {
+            message.setAttribute("scale", "3 3 3");
+          }, 200);
+        }, 28500);
         setTimeout(() => {
           message.setAttribute(
             "material",
             "src:./txt3.png; transparent:true; alphaTest:0;"
           );
-        }, 32000);
+        }, 31500);
         setTimeout(() => {
           message.setAttribute(
             "material",
             "src:./txt4.png; transparent:true; alphaTest:0;"
           );
-        }, 34000);
+        }, 33500);
+        setTimeout(() => {
+          message.setAttribute("scale", "0 0 0");
+        }, 38000);
         setTimeout(() => {
           message.setAttribute(
             "material",
             "src:./txt5.png; transparent:true; alphaTest:0;"
           );
-        }, 40000);
+          setTimeout(() => {
+            message.setAttribute("scale", "3 3 3");
+          }, 200);
+        }, 39500);
         setTimeout(() => {
           message.setAttribute(
             "material",
@@ -58,7 +70,7 @@
         }, 48500);
         setTimeout(() => {
           message.setAttribute("scale", "0 0 0");
-        }, 52000);
+        }, 51000);
       }
     </script>
 
@@ -126,8 +138,8 @@
       "
     >
       <p>
-        Apunta a la imagen del roll-up para ver el video. Luego da click a la pantalla para
-        comenzar.
+        Apunta a la imagen del roll-up para ver el video. Luego da click a la
+        pantalla para comenzar.
       </p>
     </div>
   </body>
