@@ -32,6 +32,18 @@
         setTimeout(() => {
           message.setAttribute(
             "material",
+            "src:./txt1_5.png; transparent:true; alphaTest:0;"
+          );
+          setTimeout(() => {
+            message.setAttribute("scale", "2.5 2.5 2.5");
+          }, 200);
+        }, 23000);
+        setTimeout(() => {
+          message.setAttribute("scale", "0 0 0");
+        }, 25000);
+        setTimeout(() => {
+          message.setAttribute(
+            "material",
             "src:./txt2.png; transparent:true; alphaTest:0;"
           );
           setTimeout(() => {
