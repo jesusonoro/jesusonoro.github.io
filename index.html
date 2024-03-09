@@ -10,17 +10,6 @@
         video.play();
         var introMsg = document.getElementById("introMsg");
         introMsg.style.display = "none";
-        var logo3D = document.querySelector("#logoEntity");
-        console.log("logo3D");
-        console.log(logo3D);
-        setTimeout(() => {
-          console.log("showing logo");
-          logo3D.setAttribute("scale", "1.2 1.2 1.2");
-        }, 8000);
-        setTimeout(() => {
-          console.log("hiding logo");
-          logo3D.setAttribute("scale", "0 0 0");
-        }, 12000);
 
         var message = document.querySelector("#message");
         setTimeout(() => {
@@ -75,7 +64,7 @@
           }, 200);
         }, 39500);
         setTimeout(() => {
-            message.setAttribute("scale", "0 0 0");
+          message.setAttribute("scale", "0 0 0");
         }, 43000);
         setTimeout(() => {
           message.setAttribute(
@@ -101,11 +90,11 @@
       onclick="playVideo()"
     >
       <a-assets>
-        <a-asset-item id="logo" src="/logo.glb"></a-asset-item>
+        <a-asset-item id="logo" src="./logo.glb"></a-asset-item>
         <video
           id="card"
           preload="auto"
-          src="./video2.mp4"
+          src="./video.mp4"
           width="160"
           height="90"
           loop="false"
@@ -123,13 +112,6 @@
           scale="4 4 1"
           rotation="0 0 0"
         ></a-plane>
-        <a-entity
-          id="logoEntity"
-          gltf-model="#logo"
-          position="0 -2.4 0.4"
-          scale="0 0 0"
-          rotation="0 0 0"
-        ></a-entity>
         <a-plane
           id="message"
           width="1.92"
@@ -142,13 +124,15 @@
       </a-entity>
     </a-scene>
 
+    <img src="./logo.png" style="z-index: 100; position: absolute; top: 0; right: 0; width: 300;" />
+
     <div
       id="introMsg"
       style="
         background-color: white;
         z-index: 1000;
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 0;
         width: 100%;
         padding: 10pt;
